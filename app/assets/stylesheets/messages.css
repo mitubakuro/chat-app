@@ -1,0 +1,82 @@
+/* 全体 */
+.wrapper{
+  display: flex;
+}
+
+/* サイドバー部分 */
+
+.side-bar{
+  display: flex;
+  flex-direction: column;
+}
+
+.side-head{
+  background-color: #253141;
+  width: 300px;
+  height: 100px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user-name{
+  color: #FAFAFA;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.new-chat{
+  color: deepskyblue;
+  font-size: 10px;
+  padding: 14px;
+  border: 1px solid lightblue;
+  text-decoration: none;
+}
+
+.side-rooms{
+  background-color: #2f3e51;
+  width: 300px;
+  height: calc(100vh - 100px);
+  padding: 0 20px;
+  overflow: scroll;
+}
+
+.room-name{
+  margin: 20px 0 40px 0;
+}
+
+.room-name a{
+  text-decoration: none;
+  color: white;
+}
+
+/* チャット部分 */
+
+.main-wrapper{
+  background-color: #ffffff;
+  height: 100vh;
+  width: calc(100vw - 300px);
+  display: flex;
+  flex-direction: column;
+}
+
+.main-head{
+  background-color: #ffffff;
+  height: 100px;
+  padding: 0 40px;
+}
+
+.chat-body{
+  background-color: #FAFAFA;
+  height: calc(100vh - 190px);
+  padding-top: 46px;
+  padding: 0 40px;
+}
+
+.chat-form{
+  background-color: #dddddd;
+  height: 90px;
+  padding: 20px 40px;
+
+}

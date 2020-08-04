@@ -20,10 +20,10 @@
   justify-content: space-between;
 }
 
-.user-name{
-  color: #FAFAFA;
+.user-name a{
   font-size: 16px;
   text-decoration: none;
+  color: #FAFAFA;
 }
 
 .new-chat{

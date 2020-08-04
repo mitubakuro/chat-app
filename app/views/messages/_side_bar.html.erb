@@ -1,5 +1,9 @@
 <div class="side-head">
-  <a class="user-name" href=#>ねこ</a>
+  <div class="user-name">
+    <%=link_to edit_user_path(current_user) do %>
+      <%= current_user.name %>
+    <%end%>
+  </div>
   <a class="new-chat" href=#>チャットを作成する</a>
 </div>
 

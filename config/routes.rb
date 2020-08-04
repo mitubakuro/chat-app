@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   get 'messages/index'
   root "messages#index"
   
-  resources :users, omly:[:edit, :update]
+  resources :users, only:[:edit, :update]
 end

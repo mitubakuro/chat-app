@@ -6,21 +6,41 @@
 </div>
 
 <div class="chat-body">
-  <div class="chat-info">
-    <div class="chat-user">Tom</div>
-    <div class="datetime">2020/08/04　12:44</div>
-  </div>
-  <div class="chat-text">おはよう</div>
-
-  <div class="chat-info">
-    <div class="chat-user">Tom</div>
-    <div class="datetime">2020/08/04　12:44</div>
-  </div>
-  <div class="chat-text">おはよう</div>
-  
+  <%=render partial: "message", collection: @messages%>
 </div>
 
-<div class="chat-form">
+
+
+
+<%= form_with model: [@room, @message], html: {class: "chat-form"}, local: true do |f|%>
+  <div class="message-forms">
+    <%= f.text_field :content, class: 'text-form', placeholder: 'type a message' %>
+    <label class="form-image">
+      <span class="image-file">画像</span>
+      <%= f.file_field :image, class: 'hidden' %>
+    </label>
+  </div>
+  <%= f.submit '送信', class: 'send-btn' %>
+<% end %>
+
+
+
+<%# 遺産 %>
+<%# 仮置のメッセージ %>
+  <%# <div class="chat-info">
+    <div class="chat-user">Tom</div>
+    <div class="datetime">2020/08/04　12:44</div>
+  </div>
+  <div class="chat-text">おはよう</div>
+
+  <div class="chat-info">
+    <div class="chat-user">Tom</div>
+    <div class="datetime">2020/08/04　12:44</div>
+  </div>
+  <div class="chat-text">おはよう</div> %>
+
+<%# 以下はHTML→ヘルパーメソッドに書き換えた時の原文 %>
+<%# <div class="chat-form">
   <div class="message-forms">
     <input class="text-form" type="text" placeholder="type a message">
     <label class="form-image">
@@ -29,4 +49,4 @@
     </label>
   </div>
   <input class="send-btn" type="submit" value="送信">
-</div>
+</div> %>

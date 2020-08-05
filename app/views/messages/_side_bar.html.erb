@@ -4,18 +4,15 @@
       <%= current_user.name %>
     <%end%>
   </div>
-  <a class="new-chat" href=#>チャットを作成する</a>
+  <%=link_to "チャットを作成する", new_room_path, {class:"new-chat"}%>
 </div>
 
 <div class="side-rooms">
   <div class="room">
-    <div class="room-name">
-      <a href=#>room1</a>
-    </div>
-    <div class="room">
+    <% current_user.rooms.each do |room| %>
       <div class="room-name">
-        <a href=#>room2</a>
+        <a class="rn" href=#><%= room.name %></a>
       </div>
-    </div>
+    <% end %>
   </div>
 </div>

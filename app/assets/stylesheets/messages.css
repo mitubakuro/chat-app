@@ -87,7 +87,7 @@
   text-decoration: none;
 }
 
-
+/* メッセージ表示画面 */
 .chat-body{
   background-color: #FAFAFA;
   height: calc(100vh - 190px);
@@ -95,27 +95,32 @@
   overflow: scroll;
 }
 
-.chat-info{
+.message{
   margin-top: 10px;
+  /* display: flex; */
+}
+
+.upper-message{
   display: flex;
 }
 
-.chat-user{
+.message-user{
   color: #434a54;
   font-size: 16px;
 }
 
-.datetime{
+.message-date{
   color: #999999;
   font-size: 12px;
   margin-left: 10px;
 }
 
-.chat-text{
+.message-content{
   padding-bottom: 10px;
   margin-bottom: 40px;
 }
 
+/* メッセージ入力フォームのCSS */
 .chat-form{
   background-color: #dddddd;
   height: 90px;
